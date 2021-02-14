@@ -1,0 +1,10 @@
+.icon{
+    display: flex;
+    width:12.5%;
+    justify-content: center;
+}
+.iconimg{
+    width:25px;
+    padding: 5px;
+    border-radius: 10px;
+}

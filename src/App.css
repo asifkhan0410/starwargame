@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+.app{
+    background-color: #5a5560;
+    background-image: url('./images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:0px 30px 30px 30px;
+    display: flex;
+    flex-direction:column ;
+    font-family: "Titillium Web";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__header>h1{
+    margin: 0px;
+    font-size: 6rem;
+    letter-spacing: 9px;
+    -webkit-text-stroke-width:medium;
+    color:#faed26
+}
+.app__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px 0px 30px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header>input{
+    flex:0.4;
+    border-radius:30px;
+    font-size: large;
+    font-style: italic;
+    padding:14px;
+    box-shadow: 0px 9px 9px -2px #46344e;
+    border:none;
+    outline-width: 0;
+}
+.search__warning{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-size: x-large;
+    font-weight: 700;
+    padding: 100px 0px;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-size: x-large;
+    font-weight: 700;
+    padding: 100px 0px;
+}
+.loading .icon >img{
+    width:50px;
+    animation: loading 0.6s infinite ease-in-out ;
+}
+@keyframes loading{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.app__count{
+    align-self: flex-start;
+    background-color: #46344e;
+    color: lightgray;
+    font-weight: 900;
+    width: 15%;
+    padding: 11px 80px;
+    border-radius: 40px;
+    box-shadow: 0px 9px 9px -2px #46344e;
+    font-size: 1.4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__body{
+    margin: 40px 0px;
+    background-color: #46344e;
+}
+.app__bodyheader{
+    display: flex;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #9d8d8f;
+    box-shadow: 0px 9px 9px -2px #5a5560;
+    justify-content: space-around;
+}
+.app__bodyheader>h1{
+    width: 12.5%;
+    padding: 5px;
+    transition: all ease-in 0.1s;
+    color:#46344e;
+}
+.app__bodyheader>h1:hover{
+    color:lightgray;
 }
 
-.App-link {
-  color: #61dafb;
+.app__bodydataitem{
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+    align-items: center;
+    font-size: x-small;
+    min-height: 80px;
+    box-shadow: 0px 9px 9px -2px #5a5560;
+    justify-content: space-around;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__bodydataitem>h1{
+    width: 12.5%;
+    margin:0px;
+    color:#ccc;
+    padding: 8px;
+    /* border-bottom: 1px solid #46344e; */
+}
+.app__footer{
+    display: flex;
+    justify-content: center;
+}
+.app__footer>button{
+    margin: 10px 6px;
+    color: #ccc;
+    background-color: #46344e;
+    padding: 10px 22px;
+    letter-spacing: 7px;
+    outline: none;
+    font-weight: bold;
+    border: 2px solid #46344e;
+    border-radius: 20px;
+}
+.app__footer>button:disabled{
+    color:#46344e;
+    background-color: #ccc;
+}
+@media only screen and (max-width:415px){
+    .app{
+        padding:10px;
+    }
+    .app__header>h1{
+        font-size: 3.1rem;
+        -webkit-text-stroke-width:medium;
+    }
+    .app__middle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .app__middle>input{
+        flex:0.4;
+        border-radius:30px;
+        font-size: 11px;
+        font-style: italic;
+        padding:4px;
+        box-shadow: 0px 9px 9px -2px #46344e;
+        border:none;
+        outline-width: 0;
+    }
+    .app__count{
+        flex:0.4;
+        align-self: center;
+        padding: 2px 25px;
+        font-size: 0.7rem;
+    }
+    .app__bodyheader>h1{
+        font-size: 0.6rem;
+    }
+    .app__bodydataitem>h1{
+        font-size: 0.6rem;
+    }
+    .app__bodydataitem .icon {
+        width:12.5%;
+    }
+    .app__bodydataitem .icon >img {
+        width:10px;
+    }
+    .search__warning{
+        font-size: inherit;
+    }
+    .loading{
+        font-size: inherit;
+    }
 }
