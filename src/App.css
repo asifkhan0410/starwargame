@@ -73,6 +73,7 @@
 
 .app__body{
     margin: 40px 0px;
+    border-radius: 10px;
     background-color: #46344e;
 }
 .app__bodyheader{
